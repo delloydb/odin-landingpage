@@ -1,0 +1,234 @@
+/* styles.css – landing page exact styling from spec */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* header – dark background, logo + nav */
+.header {
+    background-color: #1F2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+}
+
+.logo {
+    font-size: 24px;
+    color: #F9FAF8;
+    font-weight: 700;              /* semi-bold but matches spec weight */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #E5E7EB;                /* hero secondary / header link */
+    font-size: 18px;
+}
+
+/* hero section – dark background, two columns */
+.hero {
+    background-color: #1F2937;
+    display: flex;
+    padding: 4rem 10%;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #E5E7EB;
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 280px;
+    background-color: #6B7280;      /* neutral grey for placeholder */
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;              /* slight softening, no spec */
+}
+
+/* base button style (blue) */
+.btn {
+    background-color: #3882F6;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn:hover {
+    background-color: #2a5fb3;       /* subtle interaction, not required */
+}
+
+/* information section – white background, four cards */
+.info-section {
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    margin-bottom: 2.5rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 170px;
+}
+
+.illustration {
+    width: 170px;
+    height: 170px;
+    background-color: #E5E7EB;       /* light grey, as quote bg */
+    border-radius: 12px;              /* soft square, common in such layouts */
+    margin-bottom: 0.75rem;
+    /* no border – clean per spec, but could add subtle definition */
+}
+
+.card p {
+    font-size: 16px;
+    color: #1F2937;
+    line-height: 1.3;
+}
+
+/* quote section – light grey background */
+.quote-section {
+    background-color: #E5E7EB;
+    padding: 4rem 10%;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-weight: 300;
+    color: #1F2937;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-author {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    color: #1F2937;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* call to action section – blue box with white text */
+.cta-section {
+    padding: 4rem 10%;
+}
+
+.cta-box {
+    background-color: #3882F6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 4rem;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.cta-text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.cta-text p {
+    font-size: 18px;
+    color: #E5E7EB;                /* lighter text inside cta */
+}
+
+.cta-btn {
+    border: 2px solid white;        /* stands out on same blue background */
+    background-color: #3882F6;      /* keep consistent, border defines it */
+}
+
+.cta-btn:hover {
+    background-color: #2a5fb3;
+    border-color: #f0f0f0;
+}
+
+/* footer – same dark as header/hero */
+.footer {
+    background-color: #1F2937;
+    color: white;
+    text-align: center;
+    padding: 2rem 10%;
+    font-size: 18px;
+}
+
+/* small screens adjustments */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .hero-text h1 {
+        font-size: 38px;
+    }
+    .quote-text {
+        font-size: 28px;
+    }
+    .cta-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-text {
+        text-align: center;
+    }
+}
